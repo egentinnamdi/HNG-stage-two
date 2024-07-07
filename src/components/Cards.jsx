@@ -1,3 +1,7 @@
+import "lazysizes";
+// import a plugin
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
+
 function Cards({ prodName, prodText, prodImg }) {
   return (
     <div className="flex flex-col items-center py-12 space-y-5">
@@ -7,7 +11,12 @@ function Cards({ prodName, prodText, prodImg }) {
         open collection
       </button>
       <div>
-        <img src={prodImg} alt={prodName} />
+        <img
+          data-src={prodImg}
+          alt={prodName}
+          className="lazyload"
+          data-sizes="auto"
+        />
       </div>
     </div>
   );
