@@ -1,5 +1,4 @@
 import "lazysizes";
-// import a plugin
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
 
 function Cards({ prodName, prodText, prodImg }) {

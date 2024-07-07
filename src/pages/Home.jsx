@@ -6,7 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useState } from "react";
 
 const cardObj = [
   {
@@ -30,11 +29,11 @@ const cardObj = [
 ];
 
 function Home() {
-  const [active, setActive] = useState(1);
+  // const [active, setActive] = useState(1);
   return (
     <Carousel>
       <CarouselContent>
-        {cardObj.map((item, index) => {
+        {cardObj.map((item) => {
           return (
             <CarouselItem key={item.prodName}>
               <Cards

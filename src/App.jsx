@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import NewCollecs from "./components/NewCollecs";
+import ProductList from "./components/ProductList";
 import Home from "./pages/Home";
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
         <div className="position"></div>
       </div> */}
       <NewCollecs />
+      <ProductList />
+      <div className="min-h-screen"></div>
       <Navbar />
     </div>
   );
