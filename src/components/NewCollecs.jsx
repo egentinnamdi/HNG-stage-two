@@ -8,14 +8,16 @@ function NewCollecs() {
         <h3 className="capitalize  font-medium h-1/6">mens's denim jacket</h3>
         <div className="h-5/6 relative">
           <img
-            className="h-full m-auto "
-            src="/man-jacket-no-curve.png"
+            className="h-full m-auto lazyload"
+            data-src="/man-jacket-no-curve.png"
             alt="man-jacket-no-curve"
+            data-sizes="auto"
           />
           <img
-            className="h-24 w-20 absolute right-0 top-0 "
-            src="/man-jacket-no-curve.png"
+            className="h-24 w-20 absolute right-0 top-0 lazyload"
+            data-src="/man-jacket-no-curve.png"
             alt="man-jacket-no-curve"
+            data-sizes="auto"
           />
         </div>
       </div>
