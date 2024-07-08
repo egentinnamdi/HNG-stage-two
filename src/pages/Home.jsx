@@ -34,8 +34,8 @@ const cardObj = [
 function Home() {
   // const [active, setActive] = useState(1);
   return (
-    <div className="min-h-screen bg-secondary text-white flex flex-col">
-      <Carousel>
+    <div className="min-h-screen bg-secondary text-white relative flex flex-col ">
+      <Carousel className="">
         <CarouselContent>
           {cardObj.map((item) => {
             return (
@@ -49,8 +49,8 @@ function Home() {
             );
           })}
         </CarouselContent>
-        {/* <CarouselPrevious className="bg-black absolute z-10" />
-      <CarouselNext className="bg-black absolute z-10 left-96" /> */}
+        <CarouselPrevious className="bg-black absolute  top-2/4 left-11" />
+        <CarouselNext className="bg-black absolute  top-2/4 bottom-0 right-11 " />
       </Carousel>
       <NewCollecs />
       <ProductList />
