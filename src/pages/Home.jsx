@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const cardObj = [
+export const cardObj = [
   {
     prodName: "Autumn Jackets",
     prodText:

@@ -7,7 +7,10 @@ function NewCollecs() {
       <h2 className="h-1/6  py-3  pl-1 capitalize font-medium text-xl">
         new collections
       </h2>
-      <div className="bg-secondaryTwo rounded-2xl h-[50vh] p-5 pb-0 relative">
+      <div
+        id="collection"
+        className="bg-secondaryTwo rounded-2xl h-[50vh] p-5 pb-0 relative"
+      >
         <h3 className="capitalize  font-medium h-1/6">
           men&apos;s denim jacket
         </h3>
