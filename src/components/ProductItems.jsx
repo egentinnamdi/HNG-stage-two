@@ -11,11 +11,11 @@ function ProductItems({ prodImg, id, index, productName, price }) {
       className={`transition-all duration-500 ease-in-out h-full  relative space-y-2 min-w-full scroll-smooth `}
     >
       <Heart className=" absolute right-7 top-7 text-gray-600" />
-      <div className="rounded-2xl bg-white flex justify-center items-center">
+      <div className="rounded-2xl bg-white flex justify-center items-center py-5">
         <img
           data-src={image}
           data-sizes="auto"
-          className="lazyload"
+          className="lazyload  h-60"
           alt={prodImg}
         />
       </div>

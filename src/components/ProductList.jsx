@@ -13,19 +13,19 @@ function ProductList() {
     },
     {
       id: 1,
-      product: "shirt",
+      product: "shirt-blue",
       productName: "Slim Fit T-Shirts",
       price: "$130/ $100",
     },
     {
       id: 2,
-      product: "shirt",
+      product: "shirt-brown",
       productName: "Slim Fit T-Shirts",
       price: "$130/ $100",
     },
     {
       id: 3,
-      product: "shirt",
+      product: "bag",
       productName: "Slim Fit T-Shirts",
       price: "$130/ $100",
     },
@@ -52,17 +52,17 @@ function ProductList() {
             index={index}
             productName={item.productName}
             price={item.price}
-            key={item.product}
+            key={item.id}
           />
         ))}
       </div>
       <ArrowBigLeft
         onClick={handlePrevious}
-        className="absolute top-44  h-12 w-12 rounded-full ml-3 fill-secondaryTwo stroke-none border  border-green  p-1 active:bg-secondary transition-all duration-200 ease-in-out active:fill-secondaryTwo"
+        className="absolute top-48  h-12 w-12 rounded-full ml-3 fill-secondaryTwo stroke-none border  border-green  p-1 active:bg-secondary transition-all duration-200 ease-in-out active:fill-secondaryTwo"
       />
       <ArrowBigRight
         onClick={handleNext}
-        className="absolute top-44 right-10  h-12 w-12 rounded-full mr-3 fill-secondaryTwo stroke-none border  border-green transition-all duration-200 ease-in-out  p-1 active:bg-secondary active:fill-secondaryTwo"
+        className="absolute top-48 right-10  h-12 w-12 rounded-full mr-3 fill-secondaryTwo stroke-none border  border-green transition-all duration-200 ease-in-out  p-1 active:bg-secondary active:fill-secondaryTwo"
       />
     </div>
   );
