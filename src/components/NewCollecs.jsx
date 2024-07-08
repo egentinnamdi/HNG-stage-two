@@ -38,7 +38,7 @@ function NewCollecs() {
           <span className=" ">Men’s Sunglasses Collections</span>
           <span>30% OFF</span>
         </div>
-        <button className="capitalize bg-[#181818] rounded-xl text-xl font-medium text-white  py-5 px-10 absolute right-6 bottom-3">
+        <button className="capitalize bg-[#181818] rounded-xl text-xl font-medium text-white  py-5 px-10 absolute right-1 bottom-3">
           discover now
         </button>
       </div>
