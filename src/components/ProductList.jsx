@@ -58,11 +58,11 @@ function ProductList() {
       </div>
       <ArrowBigLeft
         onClick={handlePrevious}
-        className="absolute top-0 bottom-0  h-full w-9 stroke-green"
+        className="absolute top-44  h-12 w-12 rounded-full ml-3 fill-secondaryTwo stroke-none border  border-green  p-1 active:bg-secondary transition-all duration-200 ease-in-out active:fill-secondaryTwo"
       />
       <ArrowBigRight
         onClick={handleNext}
-        className="absolute top-0 bottom-0 right-10  h-full w-9 stroke-green"
+        className="absolute top-44 right-10  h-12 w-12 rounded-full mr-3 fill-secondaryTwo stroke-none border  border-green transition-all duration-200 ease-in-out  p-1 active:bg-secondary active:fill-secondaryTwo"
       />
     </div>
   );
