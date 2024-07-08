@@ -1,4 +1,5 @@
 import Cards from "@/components/Cards";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import NewCollecs from "@/components/NewCollecs";
 import ProductList from "@/components/ProductList";
@@ -54,6 +55,7 @@ function Home() {
       </Carousel>
       <NewCollecs />
       <ProductList />
+      <Footer />
       <Navbar />
     </div>
   );

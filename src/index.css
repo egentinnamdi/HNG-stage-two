@@ -78,4 +78,7 @@
   .position {
     @apply h-4 w-4 bg-white rounded-full mr-5 inline-block;
   }
+  .active * {
+    @apply stroke-secondary stroke-[3];
+  }
 }
