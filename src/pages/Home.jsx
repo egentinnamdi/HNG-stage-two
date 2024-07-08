@@ -1,4 +1,7 @@
 import Cards from "@/components/Cards";
+import Navbar from "@/components/Navbar";
+import NewCollecs from "@/components/NewCollecs";
+import ProductList from "@/components/ProductList";
 import {
   Carousel,
   CarouselContent,
@@ -31,23 +34,28 @@ const cardObj = [
 function Home() {
   // const [active, setActive] = useState(1);
   return (
-    <Carousel>
-      <CarouselContent>
-        {cardObj.map((item) => {
-          return (
-            <CarouselItem key={item.prodName}>
-              <Cards
-                prodName={item.prodName}
-                prodText={item.prodText}
-                prodImg={item.prodImg}
-              />
-            </CarouselItem>
-          );
-        })}
-      </CarouselContent>
-      {/* <CarouselPrevious className="bg-black absolute z-10" />
+    <div className="min-h-screen bg-secondary text-white flex flex-col">
+      <Carousel>
+        <CarouselContent>
+          {cardObj.map((item) => {
+            return (
+              <CarouselItem key={item.prodName}>
+                <Cards
+                  prodName={item.prodName}
+                  prodText={item.prodText}
+                  prodImg={item.prodImg}
+                />
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+        {/* <CarouselPrevious className="bg-black absolute z-10" />
       <CarouselNext className="bg-black absolute z-10 left-96" /> */}
-    </Carousel>
+      </Carousel>
+      <NewCollecs />
+      <ProductList />
+      <Navbar />
+    </div>
   );
 }
 

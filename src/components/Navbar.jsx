@@ -1,4 +1,5 @@
 import "lazysizes";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -19,14 +20,14 @@ function Navbar() {
           alt="medal-light"
         />
       </div>
-      <div>
+      <NavLink to="/home">
         <img
           data-sizes="auto"
           className="lazyload"
           data-src="home.png"
           alt="home"
         />
-      </div>
+      </NavLink>
       <div>
         <img
           data-sizes="auto"
@@ -35,14 +36,14 @@ function Navbar() {
           alt="store"
         />
       </div>
-      <div>
+      <NavLink to="/cart">
         <img
           data-sizes="auto"
           className="lazyload"
           data-src="cart.png"
           alt="cart"
         />
-      </div>
+      </NavLink>
     </div>
   );
 }

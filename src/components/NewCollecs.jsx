@@ -1,4 +1,5 @@
 import "lazysizes";
+import { ShoppingCart } from "lucide-react";
 
 function NewCollecs() {
   return (
@@ -6,23 +7,19 @@ function NewCollecs() {
       <h2 className="h-1/6  py-3  pl-1 capitalize font-medium text-xl">
         new collections
       </h2>
-      <div className="bg-secondaryTwo rounded-2xl h-[50vh] p-5 pb-0">
+      <div className="bg-secondaryTwo rounded-2xl h-[50vh] p-5 pb-0 relative">
         <h3 className="capitalize  font-medium h-1/6">
           men&apos;s denim jacket
         </h3>
-        <div className="h-5/6 relative">
+        <ShoppingCart className="h-7 w-7 bg-primary absolute right-8 top-4 p-1" />
+        <div className="h-5/6 ">
           <img
             className="h-full m-auto lazyload"
             data-src="/man-jacket-no-curve.png"
             alt="man-jacket-no-curve"
             data-sizes="auto"
           />
-          <img
-            className="h-24 w-20 absolute right-0 top-0 lazyload"
-            data-src="/man-jacket-no-curve.png"
-            alt="man-jacket-no-curve"
-            data-sizes="auto"
-          />
+
           <button className="capitalize bg-[#181818] rounded-xl text-xl font-medium text-white  py-5 px-10 absolute right-2 bottom-3">
             discover now
           </button>

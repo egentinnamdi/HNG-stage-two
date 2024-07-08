@@ -21,6 +21,7 @@ module.exports = {
         secondary: "#33533E",
         primary: "#FDDF67",
         secondaryTwo: "#C5C2C9",
+        green: "#4BDD34",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
