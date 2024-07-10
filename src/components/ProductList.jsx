@@ -51,10 +51,10 @@ function ProductList({ prodAdd, dispatch }) {
             prodImg={item.product}
             index={index}
             productName={item.productName}
-            price={item.price}
-            prodAdd={prodAdd}
+            id={item.id}
             dispatch={dispatch}
             key={item.id}
+            price={item.price}
           />
         ))}
       </div>

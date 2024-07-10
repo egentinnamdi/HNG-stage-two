@@ -16,16 +16,15 @@ function reducer(state, { type, payload }) {
       return [
         ...state,
         {
-          id: payload.index,
+          id: payload.id,
           image: payload.image,
           prodName: payload.productName,
           price: payload.price,
         },
       ];
     case "delete":
-      console.log(state.splice(payload));
-      state.splice(payload, 1);
-      return [...state];
+      const removedItem = state.filter((_, index) => index !== payload);
+      return removedItem;
     default:
       return state;
   }

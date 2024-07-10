@@ -1,6 +1,19 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 function Footer() {
   const [date, setDate] = useState(new Date());
+  const [intersect, setIntersect] = useState(false);
+  const target = useRef(null);
+  useEffect(function () {
+    const observer = new IntersectionObserver((entries) => {
+      setIntersect(entries[0].isIntersecting);
+    });
+    observer.observe(target.current);
+    // return () => {
+    //   if (target.current) {
+    //     observer.unobserve(target.current);
+    //   }
+    // };
+  }, []);
 
   setInterval(function () {
     setDate(new Date());
@@ -30,9 +43,9 @@ function Footer() {
       value: seconds,
     },
   ];
-
+  console.log(intersect);
   return (
-    <div className="bg-secondary min-h-32 p-5 space-y-4">
+    <div ref={target} className="bg-secondary min-h-32 p-5 space-y-4">
       <h2 className="capitalize text-2xl text-center">sales ends soon</h2>
       <div className=" w-full h-16 rounded-2xl flex justify-around">
         {counter.map((item) => (

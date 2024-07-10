@@ -3,21 +3,14 @@ import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import { Heart, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 
-function ProductItems({
-  prodImg,
-  dispatch,
-  prodAdd,
-  index,
-  productName,
-  price,
-}) {
+function ProductItems({ prodImg, dispatch, id, index, productName, price }) {
   const [isChecked, setIsChecked] = useState(false);
   const image = `./${prodImg}.png`;
 
   function handleClick() {
     dispatch({
       type: "add-to-cart",
-      payload: { image, index, productName, price },
+      payload: { image, index, productName, price, id },
     });
     setIsChecked((prev) => !prev);
   }
@@ -27,7 +20,6 @@ function ProductItems({
       className={`transition-all duration-500 ease-in-out h-full  relative space-y-2 min-w-full scroll-smooth `}
     >
       <Heart
-        onClick={handleClick}
         className={` absolute right-7 top-7 text-gray-600 ${
           isChecked ? "fill-primary" : "fill-white"
         } `}
@@ -43,7 +35,10 @@ function ProductItems({
       <div className="flex flex-col capitalize text-lg relative pl-2">
         <span>{productName}</span>
         <span>{price}</span>
-        <ShoppingCart className=" bg-primary p-1 absolute bottom-4 right-3" />
+        <ShoppingCart
+          onClick={handleClick}
+          className=" bg-primary p-1 absolute bottom-3 right-3"
+        />
       </div>
     </div>
   );

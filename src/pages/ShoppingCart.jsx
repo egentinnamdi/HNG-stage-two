@@ -12,8 +12,8 @@ function Cart({ prodAdd, dispatch }) {
     navigate(-1);
   }
   function handleDelete(e) {
-    console.log(e);
-    dispatch({ type: "delete", payload: e });
+    console.log(+e.target.id);
+    dispatch({ type: "delete", payload: +e.target.id });
   }
   return (
     <>
@@ -39,15 +39,14 @@ function Cart({ prodAdd, dispatch }) {
                       alt={item.prodName}
                     />
                   </div>
-                  <div className="flex flex-col flex-grow p-5 justify-center pl-5 space-y-6 text-2xl font-medium relative">
+                  <div className="flex flex-col flex-grow p-5 justify-center pl-5 space-y-6 text-lg  relative">
                     <span>{item.prodName}</span>
                     <span>{item.price}</span>
-                    <div
+                    <Delete
+                      id={item.id}
                       className="absolute right-6 top-16 h-16 cursor-pointer"
-                      onClick={() => handleDelete(item.index)}
-                    >
-                      <Delete />
-                    </div>
+                      onClick={handleDelete}
+                    />
                   </div>
                 </div>
               );
