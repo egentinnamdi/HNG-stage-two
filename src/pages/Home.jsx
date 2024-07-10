@@ -32,7 +32,7 @@ export const cardObj = [
   },
 ];
 
-function Home() {
+function Home({ prodAdd, dispatch }) {
   // const [active, setActive] = useState(1);
   return (
     <div className="min-h-screen bg-secondary text-white relative flex flex-col ">
@@ -54,7 +54,7 @@ function Home() {
         <CarouselNext className="bg-black absolute  top-2/4 bottom-0 right-11 " />
       </Carousel>
       <NewCollecs />
-      <ProductList />
+      <ProductList prodAdd={prodAdd} dispatch={dispatch} />
       <Footer />
       <Navbar />
     </div>

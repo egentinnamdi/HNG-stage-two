@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProductItems from "./ProductItems";
 import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
 
-function ProductList() {
+function ProductList({ prodAdd, dispatch }) {
   const [index, setIndex] = useState(0);
   const products = [
     {
@@ -52,6 +52,8 @@ function ProductList() {
             index={index}
             productName={item.productName}
             price={item.price}
+            prodAdd={prodAdd}
+            dispatch={dispatch}
             key={item.id}
           />
         ))}

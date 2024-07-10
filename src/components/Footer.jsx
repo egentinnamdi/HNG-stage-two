@@ -5,7 +5,7 @@ function Footer() {
   setInterval(function () {
     setDate(new Date());
   }, 1000);
-  let newTIme = (new Date("2024-07-10") - date) / 1000;
+  let newTIme = (new Date("2024-07-15") - date) / 1000;
   const days = Math.floor(newTIme / 86400);
   let remainder = newTIme % 86400;
   const hours = Math.floor(remainder / 3600);
